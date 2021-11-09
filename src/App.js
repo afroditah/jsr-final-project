@@ -44,7 +44,7 @@ export default class App extends Component {
         <header className="App-header">
           <NavLink exact to="/">Burger Blog</NavLink>
           <nav>
-
+            <NavLink exact to="/create">Create Post</NavLink>
           </nav>
         </header>
         <main>
