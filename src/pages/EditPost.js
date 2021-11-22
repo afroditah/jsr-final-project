@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-export default class CreatePost extends Component {
-    state = {
-        postData: {
-            title: '',
-            category: '',
-            image: '',
-            excerpt: '',
-        }
+export default class EditPost extends Component {
+    state= {
+        postData: this.props.location.state.postToEdit
     }
 
     handleChange = e => {
@@ -21,13 +17,13 @@ export default class CreatePost extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        this.props.createPost(this.state.postData);
+        this.props.updatePost(this.state.postData);
     }
 
     render() {
         return (
             <div>
-                <h1>Creat New Post</h1>
+                <h1>Edit Post</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label>Post Title</label>
@@ -36,7 +32,6 @@ export default class CreatePost extends Component {
                             value={this.state.postData.title}
                             onChange={this.handleChange}
                             name="title"
-                            required
                         />
                     </div>
                     <div className="form-group">
@@ -46,17 +41,15 @@ export default class CreatePost extends Component {
                             value={this.state.postData.category}
                             onChange={this.handleChange}
                             name="category"
-                            required
                         />
                     </div>
                     <div className="form-group">
-                        <label>Image URL</label>
+                        <label>Image</label>
                         <input
                             className="form-control"
                             value={this.state.postData.image}
                             onChange={this.handleChange}
                             name="image"
-                            required
                         />
                     </div>
                     <div className="form-group">
@@ -66,10 +59,10 @@ export default class CreatePost extends Component {
                             value={this.state.postData.excerpt}
                             onChange={this.handleChange}
                             name="excerpt"
-                            required
                         />
                     </div>
-                    <button type="submit" className="btn">Create Post</button>
+                    <button type="submit" className="btn">Update Post</button>
+                    <Link className="btn btn-outline" to='/'>Cancel</Link>
                 </form>
             </div>
         );

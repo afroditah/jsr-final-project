@@ -14,14 +14,38 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.App-header,
+footer {
+  background-color: #231f20;
+  border-radius: 2rem;
   color: white;
+  padding: 1rem;
+}
+
+.App-header a {
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: .25rem .75rem .25rem .5rem;
+}
+
+.App-header a:hover {
+  background: white;
+  border-radius: 1rem;
+  color: #282c34;
+  text-decoration: none;
+}
+
+.App-header .material-icons {
+  margin-right: .25rem;
 }
 
 .App-link {
@@ -35,4 +59,91 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  background: #ffd931;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  padding: .5rem;
+}
+
+main {
+  max-width: 75vw;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+h1,
+h2 {
+  font-family: 'Corben', cursive;
+}
+
+h1 {
+  font-size: 8vw;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+.material-icons {
+  font-size: inherit;
+  vertical-align: text-bottom;
+}
+
+.btn {
+  background: #282c34;
+  border-radius: 2rem;
+  color: white;
+  font-weight: 700;
+  padding: .4rem 1.25rem .5rem;
+  margin: .5rem 1rem;
+}
+
+.btn-outline {
+  background: none;
+  border: 1px solid #282c34;
+  color: #282c34;
+}
+
+.btn:hover {
+  background: #121417;
+  color: white;
+  transform: translateY(1px)
+}
+
+.btn-outline:hover {
+  color: white;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  text-align: left;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 4rem 0 2rem;
+}
+
+.posts-grid article {
+  border: 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+article img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  font-size: .8rem;
+  margin: 0;
 }
