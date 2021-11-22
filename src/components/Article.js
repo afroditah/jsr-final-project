@@ -14,14 +14,7 @@ export default function Article(props) {
                 <Link 
                     className="btn"
                     to={{ pathname:`/detail/${props.post.id}`, state: {postToView: props.post} }}
-                >View More</Link>
-                {/* <Link 
-                    className="btn"
-                    to={{ pathname:`/edit/${props.post.id}`, state: {postToEdit: props.post} }}
-                >Edit</Link>
-                <button 
-                    onClick={() => props.deletePost(props.post.id)} 
-                    className="btn">Delete</button> */}
+                >View Post</Link>
             </div>
         </article>
     )

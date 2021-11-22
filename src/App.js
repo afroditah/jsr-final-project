@@ -73,7 +73,7 @@ export default class App extends Component {
       <div className="App">
         <header className="App-header">
           <NavLink exact to="/">
-            <span className="material-icons">lunch_dining</span>Home
+            <span className="material-icons">lunch_dining</span>Burger Times
           </NavLink>
           <nav>
             <NavLink exact to="/create">

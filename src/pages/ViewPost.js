@@ -18,7 +18,7 @@ export default function ViewPost(props) {
             <div className="card-footer">
                 <Link 
                     className="btn btn-outline"
-                    to={{ pathname:`/edit/${postToView.id}`, state: {postToEdit: props.post} }}
+                    to={{ pathname:`/edit/${postToView.id}`, state: {postToEdit: postToView} }}
                 > <span className="material-icons">edit</span> Edit</Link>
                 <button 
                     onClick={() => props.deletePost(postToView.id)} 
