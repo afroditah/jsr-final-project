@@ -27,7 +27,7 @@ export default class CreatePost extends Component {
     render() {
         return (
             <div>
-                <h1>Creat New Post</h1>
+                <h1>Create New Post</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label>Post Title</label>

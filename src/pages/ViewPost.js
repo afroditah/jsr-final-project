@@ -16,13 +16,23 @@ export default function ViewPost(props) {
                 <p className="card-text"><strong>Category:</strong> {postToView.category}</p>
             </div>
             <div className="card-footer">
-                <Link 
-                    className="btn btn-outline"
-                    to={{ pathname:`/edit/${postToView.id}`, state: {postToEdit: postToView} }}
-                > <span className="material-icons">edit</span> Edit</Link>
-                <button 
-                    onClick={() => props.deletePost(postToView.id)} 
-                    className="btn btn-outline"><span className="material-icons">clear</span> Delete</button>
+                {
+                    props.user
+                    ? (
+                        <>
+                            <Link 
+                                className="btn btn-outline"
+                                to={{ pathname:`/edit/${postToView.id}`, state: {postToEdit: postToView} }}
+                            ><span className="material-icons">edit</span> Edit</Link>
+                            <button 
+                                onClick={() => props.deletePost(postToView.id)} 
+                                className="btn btn-outline"><span className="material-icons">clear</span> Delete</button>
+                        </>
+                    )
+                    : (
+                        <p><a href="/login">Log in to edit post</a></p>
+                    )
+                }
             </div>
         </article>
     );

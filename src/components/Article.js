@@ -7,7 +7,6 @@ export default function Article(props) {
             <img className="card-img" src={props.post.image} alt={props.post.title} />
             <div className="card-body">
                 <h2 className="card-title">{props.post.title}</h2>
-                {/* <p className="card-text">{props.post.excerpt}</p> */}
                 <p className="card-text"><strong>Category:</strong> {props.post.category}</p>
             </div>
             <div className="card-footer">
